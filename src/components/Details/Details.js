@@ -22,7 +22,6 @@ class Details extends Component{
 	}
 	render() {
 		let data = this.state.data;
-		console.log(data);
 		if (data.name !== undefined)
 		{
 			return (

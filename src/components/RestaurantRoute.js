@@ -32,5 +32,5 @@ class RestaurantRoute extends Component{
 	}
 }
 
-export default RestaurantRoute
+export default RestaurantRoute;
 

@@ -72,4 +72,4 @@ class Details extends Component{
 
 export default GoogleApiWrapper({
   apiKey: ('AIzaSyCQfQuFDmKaXXASfj0NuoDkpXvfEPodEus')
-})(Details)
+})(Details);

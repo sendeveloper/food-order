@@ -9,9 +9,6 @@ class Header extends Component {
 	static contextTypes = {
     router: PropTypes.object
   }
-  constructor(props, context) {
-		super(props, context);
-  }
 	render() {
 		let url = window.location.href;
 		let back_visible = (url.indexOf('detail') !== -1);
@@ -29,4 +26,4 @@ class Header extends Component {
 		this.context.router.history.goBack();
 	}
 }
-export default Header
+export default Header;

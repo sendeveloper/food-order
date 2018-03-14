@@ -2,14 +2,10 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import './List.css'
-// import Details from '../Details/Details';
 
-class List extends React.Component{
+class List extends Component{
 	static contextTypes = {
     router: PropTypes.object
-  }
-  constructor(props, context) {
-     super(props, context);
   }
 	render() {
 		let data = this.props.data;

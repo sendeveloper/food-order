@@ -1,0 +1,19 @@
+.header{
+	background: #43e895;
+	height: 45px;
+	padding: 20px;
+}
+h1{
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 17px;
+	font-weight: bold;
+  	font-family: 'AvenirNext-DemiBold';
+	margin: 25px 0 0;
+	position: relative;
+}
+.logo{
+	position: absolute;
+	right: 0;
+	width: 30px;
+}

@@ -21,7 +21,7 @@ class Home extends Component
 	}
 	render() {
 		let lists = this.state.data;
-		// if (lists.length !== 0)
+		if (lists.length !== 0)
 			return (
 				<div className="transition-item list-page">
 			    {
@@ -31,8 +31,8 @@ class Home extends Component
 			    }
 			  </div>
 		  )
-		// else
-		// 	return (<div className="loading transition-item list-page">Loading...</div>)
+		else
+			return (<div className="loading transition-item list-page">Loading...</div>)
 	}
 }
 

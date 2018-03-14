@@ -2,3 +2,38 @@
 	padding-top: 30px;
 	text-align: center;
 }
+.info{
+	width: 100%;
+	position: relative;
+	top: 180px;
+}
+.info_header{
+	background: #34b379;
+	height: 36px;
+	padding: 12px;
+}
+.info_name, .info_category{
+	margin: 0px;
+	line-height: 1;
+	color: #FFFFFF;
+}
+.info_name{
+	font-size: 16px;
+	font-family: 'AvenirNext-DemiBold';
+}
+.info_category{
+	font-size: 12px;
+	padding: 6px 0 0;
+	font-family: 'Avenir Next';
+}
+.info_body{
+	padding: 16px 12px;
+	color: #2a2a2a;
+	font-size: 16px;
+}
+.info_body p{
+	line-height: 1;
+	padding: 0;
+	padding-bottom: 26px;
+	margin: 0;
+}

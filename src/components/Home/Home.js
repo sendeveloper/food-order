@@ -21,15 +21,18 @@ class Home extends Component
 	}
 	render() {
 		let lists = this.state.data;
-		return (
-			<div>
-		    {
-		    	lists.map((list, i) => {
-		    		return (<List data={list} id={i} key={i} />)
-		    	})
-		    }
-		  </div>
-	  )
+		if (lists.length !== 0)
+			return (
+				<div>
+			    {
+			    	lists.map((list, i) => {
+			    		return (<List data={list} id={i} key={i} />)
+			    	})
+			    }
+			  </div>
+		  )
+		else
+			return (<div className="loading">Loading...</div>)
 	}
 }
 

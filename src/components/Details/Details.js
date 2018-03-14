@@ -26,21 +26,34 @@ class Details extends Component{
 		if (data.name !== undefined)
 		{
 			return (
-				<Map google={this.props.google} zoom={14} initialCenter={{
-            lat: data.location.lat,
-            lng: data.location.lng
-          }} style={{width: '100%', height: '180px', position: 'relative'}}>
-	        <Marker onClick={() => this.onMarkerClick(this)}
-	                name={'Current location'} />
-	        <InfoWindow
-	          position={{lat: data.location.lat, lng: data.location.lng}}
-	          visible={this.state.showingInfoWindow}
-	          onClose={() => this.onInfoWindowClose(this)}>
-	            <div>
-	              <p>{data.name}</p>
-	            </div>
-	        </InfoWindow>
-	      </Map>
+				<div>
+					<Map google={this.props.google} zoom={14} initialCenter={{
+	            lat: data.location.lat,
+	            lng: data.location.lng
+	          }} style={{width: '100%', height: '180px', position: 'relative'}}>
+		        <Marker onClick={() => this.onMarkerClick(this)}
+		                name={'Current location'} />
+		        <InfoWindow
+		          position={{lat: data.location.lat, lng: data.location.lng}}
+		          visible={this.state.showingInfoWindow}
+		          onClose={() => this.onInfoWindowClose(this)}>
+		            <div>
+		              <p>{data.name}</p>
+		            </div>
+		        </InfoWindow>
+		      </Map>
+		      <div className="info">
+		      	<div className="info_header">
+		      		<h2 className="info_name">{data.name}</h2>
+		      		<h3 className="info_category">{data.category}</h3>
+		      	</div>
+		      	<div className="info_body">
+		      		<p className="info_address">{data.location.formattedAddress[0]}</p>
+		      		<p className="info_phone">{data.contact.formattedPhone}</p>
+		      		<p className="info_twitter">{data.contact.twitter}</p>
+		      	</div>
+		      </div>
+				</div>
 			);
 		}
 		else

@@ -1,3 +1,7 @@
+.loading{
+	padding-top: 30px;
+	text-align: center;
+}
 .header{
 	background: #43e895;
 	height: 45px;
@@ -11,6 +15,11 @@ h1{
   	font-family: 'AvenirNext-DemiBold';
 	margin: 25px 0 0;
 	position: relative;
+}
+.back{
+	position: absolute;
+	left: 0;
+	width: 20px;
 }
 .logo{
 	position: absolute;

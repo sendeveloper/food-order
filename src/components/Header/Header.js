@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
+import PropTypes from "prop-types";
 
 import './Header.css';
 import back_img from '../../assets/imgs/back.png'
 import header_img from '../../assets/imgs/header_img.png'
 
 class Header extends Component {
+	static contextTypes = {
+    router: PropTypes.object
+  }
+  constructor(props, context) {
+		super(props, context);
+  }
 	render() {
 		let url = window.location.href;
 		let back_visible = (url.indexOf('detail') !== -1);
@@ -19,7 +26,7 @@ class Header extends Component {
 		)
 	}
 	gotoHome() {
-		document.location.href = "/";
+		this.context.router.history.goBack();
 	}
 }
 export default Header

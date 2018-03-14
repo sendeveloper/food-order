@@ -25,7 +25,7 @@ class Details extends Component{
 		if (data.name !== undefined)
 		{
 			return (
-				<div>
+				<div className="transition-item detail-page">
 					<Map google={this.props.google} zoom={14} initialCenter={{
 	            lat: data.location.lat,
 	            lng: data.location.lng
@@ -48,15 +48,15 @@ class Details extends Component{
 		      	</div>
 		      	<div className="info_body">
 		      		<p className="info_address">{data.location.formattedAddress[0]}</p>
-		      		<p className="info_phone">{data.contact.formattedPhone}</p>
-		      		<p className="info_twitter">{data.contact.twitter}</p>
+		      		<p className="info_phone">{data.contact ? data.contact.formattedPhone : ''}</p>
+		      		<p className="info_twitter">{data.contact ? data.contact.twitter : ''}</p>
 		      	</div>
 		      </div>
 				</div>
 			);
 		}
 		else
-			return (<div className="loading">Loading...</div>);
+			return (<div className="loading transition-item detail-page">Loading...</div>);
 	}
 	onInfoWindowClose(parent) {
     parent.setState({

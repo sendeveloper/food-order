@@ -1,8 +1,7 @@
-import React, {Component, PropTypes} from 'react';
-
+import React, {Component} from 'react';
 
 import './List.css'
-import Details from '../Details/Details';
+// import Details from '../Details/Details';
 
 class List extends Component{
 	render() {
@@ -21,6 +20,5 @@ class List extends Component{
 		document.location.href = pageURL;
 	}
 }
-
 
 export default List

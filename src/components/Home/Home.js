@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import HomeHeader from './HomeHeader';
 import List from './List';
 
 class Home extends Component
@@ -9,11 +8,11 @@ class Home extends Component
 	constructor(props) {
 		super(props);
 		this.state = {
-        data: []
+			data: []
     }
-		this.getRestaurantFromApiAsync();
+		this.getRestaurantList();
 	}
-	getRestaurantFromApiAsync() {
+	getRestaurantList() {
 		let api_url = "https://s3.amazonaws.com/br-codingexams/restaurants.json";
 		axios.get(`https://cors-anywhere.herokuapp.com/` + api_url,{headers: {'Access-Control-Allow-Origin': '*'}})
 			.then((response) => {
@@ -24,7 +23,6 @@ class Home extends Component
 		let lists = this.state.data;
 		return (
 			<div>
-		    <HomeHeader />
 		    {
 		    	lists.map((list, i) => {
 		    		return (<List data={list} id={i} key={i} />)

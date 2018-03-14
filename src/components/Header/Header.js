@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import './HomeHeader.css';
+import './Header.css';
 import header_img from '../../assets/imgs/header_img.png'
 
-class HomeHeader extends Component {
+class Header extends Component {
 	render() {
 		return (
 			<div className="header">
@@ -15,4 +15,4 @@ class HomeHeader extends Component {
 		)
 	}
 }
-export default HomeHeader
+export default Header
